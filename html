@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+ <head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260624-03-b2656cb"}');</script><script src="/_sdk/558340785a07a8b2.telemetry_sdk.js" integrity="sha512-w6huTWybcELc18WJb0w+HZlX471QfzMUh7gbslB6onKoaFEogFDmOPMV5FcEo5/Ws8CyGWJgk7MOklfxKnVegA=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princess Aerah's Royal Celebration</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Great+Vibes&amp;family=Raleway:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+        :root {
+            --blush: #f9e4e8;
+            --rose-gold: #b76e79;
+            --gold: #c9a84c;
+            --pastel-pink: #fdf2f4;
+            --deep-pink: #e8a0b4;
+        }
+        body { font-family: 'Raleway', sans-serif; }
+        .font-calligraphy { font-family: 'Great Vibes', cursive; }
+        .font-display { font-family: 'Playfair Display', serif; }
+        .gold-border { border: 3px solid var(--gold); box-shadow: 0 0 0 1px var(--gold), inset 0 0 0 1px var(--gold); }
+        .gold-gradient { background: linear-gradient(135deg, #c9a84c, #f0d78c, #c9a84c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 3rem auto;
+            max-width: 300px;
+        }
+        .carousel-container { overflow: hidden; position: relative; }
+        .carousel-track { display: flex; transition: transform 0.5s ease; }
+        .carousel-slide { min-width: 100%; }
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, var(--gold) 0%, #f0d78c 50%, var(--gold) 100%);
+            background-size: 200% auto;
+            animation: shimmer 3s linear infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tiara-svg { filter: drop-shadow(0 2px 4px rgba(201,168,76,0.3)); }
+    </style>
+  <script src="/_sdk/c2d1d5313c51ffe1.resizing_sdk.js" type="text/javascript" integrity="sha512-qQAMemJMRFZxVvjytpvZJuJZ53CEj6hm6koWfforoCmGBxf4dwDWZGux307fbsvtDxdw8x4TQSA+OoNoE6FzlQ=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full min-h-screen"><!-- Decorative top border -->
+  <div class="w-full h-2" style="background: linear-gradient(90deg, var(--blush), var(--gold), var(--blush))"></div>
+  <header class="text-center py-12 px-4 relative"><!-- Tiara SVG -->
+   <div class="flex justify-center mb-4">
+    <svg class="tiara-svg" width="80" height="40" viewbox="0 0 80 40" fill="none"><path d="M10 35 L20 10 L30 25 L40 5 L50 25 L60 10 L70 35" stroke="#c9a84c" stroke-width="2.5" fill="none" /> <circle cx="40" cy="5" r="3" fill="#c9a84c" /> <circle cx="20" cy="10" r="2.5" fill="#f0d78c" /> <circle cx="60" cy="10" r="2.5" fill="#f0d78c" /> <path d="M8 35 Q40 30 72 35" stroke="#c9a84c" stroke-width="2" fill="none" />
+    </svg>
+   </div>
+   <p data-template-id="hero-subtitle-top" class="canva-text text-sm uppercase tracking-[0.3em] mb-4" style="color: var(--rose-gold)"></p>
+   <h1 data-template-id="hero-title" class="canva-text font-calligraphy text-5xl md:text-7xl mb-4"></h1>
+   <p data-template-id="hero-subtitle" class="canva-text font-display italic max-w-2xl mx-auto leading-relaxed px-4"></p><!-- Portrait Frame -->
+   <div class="mt-10 flex justify-center">
+    <div class="p-3 rounded-lg" style="background: linear-gradient(135deg, #c9a84c, #f0d78c, #c9a84c);">
+     <div class="p-1 bg-white rounded"><img data-template-id="hero-portrait" class="canva-image w-56 h-72 md:w-64 md:h-80 object-cover rounded" loading="lazy">
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="section-divider"></div><!-- ROYAL VOICE NARRATOR -->
+  <section class="text-center px-4 py-8">
+   <h2 data-template-id="audio-title" class="canva-text font-display text-xl mb-6"></h2>
+   <div class="inline-flex items-center gap-4 px-8 py-4 rounded-full" style="background: linear-gradient(135deg, var(--pastel-pink), var(--blush)); border: 2px solid var(--gold);"><button id="audio-btn" type="button" class="w-12 h-12 rounded-full flex items-center justify-center" style="background: var(--gold);" aria-label="Play audio message"> <i data-lucide="play" style="color: white; width: 20px; height: 20px;"></i> </button>
+    <div class="text-left">
+     <p data-template-id="audio-label" class="canva-text text-sm font-medium"></p>
+     <div class="w-40 h-1 rounded mt-1" style="background: var(--deep-pink); opacity: 0.5;"></div>
+    </div>
+   </div>
+   <p class="text-xs mt-3 italic" style="color: var(--rose-gold);">Audio playback requires user interaction</p>
+  </section>
+  <div class="section-divider"></div><!-- THE HOLY SACRAMENT -->
+  <section data-template-id="baptism-section" class="canva-section py-12 px-4">
+   <div class="max-w-xl mx-auto text-center"><!-- Cross icon -->
+    <svg class="mx-auto mb-4" width="40" height="50" viewbox="0 0 40 50" fill="none"><rect x="16" y="0" width="8" height="50" fill="#c9a84c" rx="2" /> <rect x="5" y="12" width="30" height="8" fill="#c9a84c" rx="2" />
+    </svg>
+    <h2 data-template-id="baptism-title" class="canva-text font-display text-2xl mb-2"></h2>
+    <p data-template-id="baptism-time" class="canva-text text-lg mb-1"></p>
+    <p data-template-id="baptism-location" class="canva-text mb-6"></p><a href="https://maps.google.com/?q=Immaculate+Concepcion+Parish+Cathedral+Virac" target="_blank" rel="noopener noreferrer"> <button data-template-id="baptism-map-btn" type="button" class="canva-button px-6 py-2 rounded-full text-sm font-medium transition hover:opacity-90"></button> </a>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- THE ROYAL BANQUET -->
+  <section data-template-id="banquet-section" class="canva-section py-12 px-4">
+   <div class="max-w-xl mx-auto text-center"><!-- Castle icon -->
+    <svg class="mx-auto mb-4" width="50" height="45" viewbox="0 0 50 45" fill="none"><rect x="5" y="20" width="40" height="25" fill="#c9a84c" rx="2" /> <rect x="0" y="15" width="8" height="30" fill="#c9a84c" rx="1" /> <rect x="42" y="15" width="8" height="30" fill="#c9a84c" rx="1" /> <rect x="18" y="30" width="14" height="15" fill="#fdf2f4" rx="7 7 0 0" /> <polygon points="25,0 20,12 30,12" fill="#c9a84c" /> <rect x="1" y="12" width="6" height="4" fill="#f0d78c" /> <rect x="43" y="12" width="6" height="4" fill="#f0d78c" />
+    </svg>
+    <h2 data-template-id="banquet-title" class="canva-text font-display text-2xl mb-2"></h2>
+    <p data-template-id="banquet-time" class="canva-text text-lg mb-1"></p>
+    <p data-template-id="banquet-location" class="canva-text mb-6"></p><a href="https://maps.google.com/?q=The+Lumber+Hotel+and+Resort" target="_blank" rel="noopener noreferrer"> <button data-template-id="banquet-map-btn" type="button" class="canva-button px-6 py-2 rounded-full text-sm font-medium transition hover:opacity-90"></button> </a>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- THE PRINCESS'S GALLERY -->
+  <section class="py-12 px-4">
+   <h2 data-template-id="gallery-title" class="canva-text font-display text-2xl text-center mb-8"></h2><!-- Carousel -->
+   <div class="max-w-lg mx-auto relative">
+    <div class="carousel-container rounded-xl overflow-hidden gold-border">
+     <div class="carousel-track" id="carousel-track">
+      <div class="carousel-slide p-2">
+       <img data-template-id="gallery-img-1" class="canva-image w-full h-72 object-cover rounded-lg" loading="lazy">
+      </div>
+      <div class="carousel-slide p-2">
+       <img data-template-id="gallery-img-2" class="canva-image w-full h-72 object-cover rounded-lg" loading="lazy">
+      </div>
+      <div class="carousel-slide p-2">
+       <img data-template-id="gallery-img-3" class="canva-image w-full h-72 object-cover rounded-lg" loading="lazy">
+      </div>
+      <div class="carousel-slide p-2">
+       <img data-template-id="gallery-img-4" class="canva-image w-full h-72 object-cover rounded-lg" loading="lazy">
+      </div>
+      <div class="carousel-slide p-2">
+       <img data-template-id="gallery-img-5" class="canva-image w-full h-72 object-cover rounded-lg" loading="lazy">
+      </div>
+      <div class="carousel-slide p-2">
+       <img data-template-id="gallery-img-6" class="canva-image w-full h-72 object-cover rounded-lg" loading="lazy">
+      </div>
+     </div>
+    </div><button type="button" id="prev-btn" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg" style="background: var(--gold);" aria-label="Previous photo"> <i data-lucide="chevron-left" style="color:white;width:20px;height:20px;"></i> </button> <button type="button" id="next-btn" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center shadow-lg" style="background: var(--gold);" aria-label="Next photo"> <i data-lucide="chevron-right" style="color:white;width:20px;height:20px;"></i> </button>
+    <div class="flex justify-center gap-2 mt-4" id="carousel-dots"></div>
+   </div><!-- Video placeholder -->
+   <div class="max-w-lg mx-auto mt-10">
+    <div class="gold-border rounded-xl overflow-hidden relative"><img data-template-id="video-placeholder" class="canva-image w-full h-56 object-cover" loading="lazy">
+     <div class="absolute inset-0 flex items-center justify-center bg-black/20">
+      <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background: rgba(201,168,76,0.9);"><i data-lucide="play" style="color:white;width:28px;height:28px;"></i>
+      </div>
+     </div>
+    </div>
+    <p data-template-id="video-caption" class="canva-text text-center text-sm mt-3 italic"></p>
+   </div>
+  </section>
+  <div class="section-divider"></div><!-- RSVP FORM -->
+  <section class="py-12 px-4">
+   <div class="max-w-md mx-auto rounded-2xl p-8" style="border: 2px solid var(--deep-pink); background: var(--pastel-pink);">
+    <h2 data-template-id="rsvp-title" class="canva-text font-display text-2xl text-center mb-2"></h2>
+    <p data-template-id="rsvp-subtitle" class="canva-text text-center text-sm mb-6"></p>
+    <form id="rsvp-form" class="space-y-4">
+     <div><label data-template-id="label-name" class="canva-text block text-sm font-medium mb-1" for="guest-name"></label> <input id="guest-name" type="text" data-template-id="input-name" class="canva-input w-full px-4 py-2 rounded-lg border" style="border-color: var(--deep-pink);" required>
+     </div>
+     <div><label data-template-id="label-seats" class="canva-text block text-sm font-medium mb-1" for="guest-seats"></label> <input id="guest-seats" type="number" min="1" max="10" value="1" class="w-full px-4 py-2 rounded-lg border" style="border-color: var(--deep-pink);">
+     </div>
+     <div><label data-template-id="label-attending" class="canva-text block text-sm font-medium mb-1" for="attending-select"></label> <select id="attending-select" class="w-full px-4 py-2 rounded-lg border" style="border-color: var(--deep-pink);"> <option value="Yes">Yes, I shall attend!</option> <option value="No">Regretfully, I cannot</option> </select>
+     </div>
+     <div><label data-template-id="label-message" class="canva-text block text-sm font-medium mb-1" for="guest-message"></label> <textarea id="guest-message" rows="3" class="w-full px-4 py-2 rounded-lg border resize-none" style="border-color: var(--deep-pink);"></textarea>
+     </div><button data-template-id="rsvp-button" type="submit" class="canva-button w-full py-3 rounded-full font-semibold text-white transition hover:opacity-90"></button>
+    </form>
+    <div id="rsvp-success" class="hidden text-center py-6">
+     <svg class="mx-auto mb-3" width="48" height="48" viewbox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#c9a84c" stroke-width="3" fill="none" /> <path d="M14 24 L21 31 L34 18" stroke="#c9a84c" stroke-width="3" fill="none" stroke-linecap="round" />
+     </svg>
+     <p data-template-id="rsvp-success-msg" class="canva-text font-display text-lg"></p>
+    </div>
+    <div id="rsvp-error" class="hidden text-center py-4">
+     <p data-template-id="rsvp-error-msg" class="canva-text text-sm"></p>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer class="text-center py-8 px-4" style="background: linear-gradient(to top, var(--blush), transparent);">
+   <p data-template-id="footer-text" class="canva-text font-calligraphy text-2xl"></p>
+  </footer>
+  <div class="w-full h-2" style="background: linear-gradient(90deg, var(--blush), var(--gold), var(--blush))"></div>
+  <script src="/_sdk/ba7a87cbf0298387.editing_sdk.js" integrity="sha512-Tj5coTlt0zVGjhUTG6We0NjzvddIVl9nrFVeLejaQFP8g9Kb83FahoAtAQLehYaTUxeN5sV/r4RJs7ytEpNoVQ=="></script>
+  <script src="/_sdk/458114e02319f6fb.data_sdk.js" integrity="sha512-MqxhlifLEIhxYPJAUg/WtiC5CY0R45RHAAwK31m2gePcEv6/zWdaNb/OHXNXZYtkB4TsvIOYMOacwywX7AXC3g=="></script>
+  <script>
+        lucide.createIcons();
+
+        // Carousel
+        let currentSlide = 0;
+        const track = document.getElementById('carousel-track');
+        const totalSlides = 6;
+        const dotsContainer = document.getElementById('carousel-dots');
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'w-2.5 h-2.5 rounded-full transition';
+            dot.style.background = i === 0 ? 'var(--gold)' : 'var(--deep-pink)';
+            dot.style.opacity = i === 0 ? '1' : '0.4';
+            dot.setAttribute('aria-label', `Slide ${i+1}`);
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        function goToSlide(n) {
+            currentSlide = n;
+            track.style.transform = `translateX(-${n * 100}%)`;
+            dotsContainer.querySelectorAll('button').forEach((d, i) => {
+                d.style.background = i === n ? 'var(--gold)' : 'var(--deep-pink)';
+                d.style.opacity = i === n ? '1' : '0.4';
+            });
+        }
+
+        document.getElementById('prev-btn').onclick = () => goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+        document.getElementById('next-btn').onclick = () => goToSlide((currentSlide + 1) % totalSlides);
+
+        // Audio (Web Audio API placeholder - plays a gentle tone)
+        let audioCtx, isPlaying = false;
+        document.getElementById('audio-btn').addEventListener('click', function() {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            if (isPlaying) {
+                audioCtx.suspend();
+                isPlaying = false;
+                this.innerHTML = '<i data-lucide="play" style="color:white;width:20px;height:20px;"></i>';
+            } else {
+                audioCtx.resume();
+                // Play a gentle chime
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(523, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 2);
+                osc.connect(gain).connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 2);
+                isPlaying = true;
+                this.innerHTML = '<i data-lucide="pause" style="color:white;width:20px;height:20px;"></i>';
+                setTimeout(() => { isPlaying = false; this.innerHTML = '<i data-lucide="play" style="color:white;width:20px;height:20px;"></i>'; }, 2000);
+            }
+            lucide.createIcons();
+        });
+
+        // RSVP Form with Data SDK
+        const form = document.getElementById('rsvp-form');
+        const successDiv = document.getElementById('rsvp-success');
+        const errorDiv = document.getElementById('rsvp-error');
+
+        const handler = { onDataChanged(data) {} };
+
+        (async () => {
+            const res = await window.dataSdk.init(handler);
+            if (!res.isOk) console.error('Data SDK init failed');
+        })();
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('[data-template-id="rsvp-button"]');
+            btn.disabled = true;
+            btn.style.opacity = '0.6';
+
+            const record = {
+                guest_name: document.getElementById('guest-name').value.trim(),
+                number_of_seats: parseInt(document.getElementById('guest-seats').value) || 1,
+                attending: document.getElementById('attending-select').value,
+                message: document.getElementById('guest-message').value.trim()
+            };
+
+            const result = await window.dataSdk.create(record);
+            btn.disabled = false;
+            btn.style.opacity = '1';
+
+            if (result.isOk) {
+                form.classList.add('hidden');
+                successDiv.classList.remove('hidden');
+                errorDiv.classList.add('hidden');
+            } else {
+                errorDiv.classList.remove('hidden');
+            }
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a10f129856508b87',t:'MTc4MjMzOTEzMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
